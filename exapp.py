@@ -48,10 +48,10 @@ with tab2:
         placeholder='삭제할 메뉴를 입력하세요'
     )
     if st.button('메뉴삭제'):
-        if delete.strip():
+        if delete.strip() in st.session_state.menu:
             st.session_state.menu.remove(delete)
             st.success('메뉴를 삭제했습니다')
-        else:
+        elif delete.strip() not in st.session_state.menu:
             st.error('해당 메뉴가 없습니다')
 
 st.divider()
