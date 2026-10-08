@@ -47,7 +47,6 @@ if st.button('랜덤뽑기'):
 
 st.divider()
 
-
 st.subheader('저장된 메뉴')
 st.markdown(','.join(st.session_state.menu))
 
